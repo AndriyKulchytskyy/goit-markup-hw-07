@@ -1,0 +1,162 @@
+/* ============================== PAGE_NAVIGATION ============================== */
+
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.wiev {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.wiev-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    background: var(--thumb-bg-color);
+    cursor: pointer;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wiev-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.wiev-btn:hover,
+.wiev-btn:focus {
+    color: var(--hero-title-color);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+.wiev-btn-current {
+    pointer-events: none;
+    color: var(--hero-title-color);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+/* ============================== END PAGE_NAVIGATION ============================== */
+
+/* ============================== PROJECTS ============================== */
+.projects-title {
+    display: none;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1*var(--project-item-gap));
+    margin-left: calc(-1*var(--project-item-gap));
+}
+
+.projects-list-item {    
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--project-item-gap);
+    margin-left: var(--project-item-gap);
+    flex-basis: calc(100%/3-var(--project-item-gap));
+
+    background: var(--hero-title-color);
+}
+
+.projects-list-item-link{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-list-item-link:hover,
+.projects-list-item-link:focus {
+    cursor: pointer;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+.projects-list-item-link:hover .project-item-overlay,
+.projects-list-item-link:focus .project-item-overlay {
+    transform: translateY(0%);    
+}
+
+
+.projects-item-wrapper {
+    position: relative;    
+    overflow: hidden;
+}
+
+.project-item-overlay{
+    padding: 63px 24px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* overflow: hidden;     */
+}
+
+.project-overlay-text{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--hero-title-color);
+}
+
+
+
+.projects-img-thumb {
+    padding: 20px 24px;
+
+    border-left: 1px solid rgba(238, 238, 238, 1);
+    border-right: 1px solid rgba(238, 238, 238, 1);
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+}
+
+.projects-img-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-color);
+}
+
+.projects-img-text {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--second-color);
+}
+
+/* ============================== END PROJECTS ============================== */
+
+
