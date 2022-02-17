@@ -740,7 +740,7 @@ body{
     margin-bottom: 20px;
 }
 
-.form-field{
+.form-field:not(:last-child){
     display: flex;
     flex-direction: column;
     align-items: start;
